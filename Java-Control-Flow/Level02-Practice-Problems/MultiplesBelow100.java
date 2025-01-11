@@ -19,7 +19,6 @@ class MultiplesBelow100 {
             }
         }
         
-        // Close the scanner object to prevent memory leak
         input.close();
     }
 }
