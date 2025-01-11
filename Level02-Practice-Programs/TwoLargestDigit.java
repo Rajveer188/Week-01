@@ -1,7 +1,7 @@
- // Importing Scanner class
+// Importing Scanner class
 import java.util.Scanner;
 
-class TwoLargestDigitDynamic{
+class TwoLargestDigit{
     // Main method
     public static void main(String[] args) {
         //Create Scanner object
@@ -17,10 +17,7 @@ class TwoLargestDigitDynamic{
 
         while (number != 0) {
             if (index == maxDigit) {
-                maxDigit += 10;
-                int[] temp = new int[maxDigit];
-                System.arraycopy(digits, 0, temp, 0, digits.length);
-                digits = temp;
+                break;
             }
             digits[index++] = number % 10;
             number /= 10;

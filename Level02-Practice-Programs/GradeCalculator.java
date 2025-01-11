@@ -1,7 +1,7 @@
 // Importing Scanner class
 import java.util.Scanner;
 
-class GradeCalculator2D {
+class GradeCalculator {
     // Main method
     public static void main(String[] args) {
         //create Scanner object
@@ -12,7 +12,9 @@ class GradeCalculator2D {
         int numberOfStudents = input.nextInt();
 
         //arrays to store marks, percentages, and grades
-        int[][] marks = new int[numberOfStudents][3];
+        int[] physicsMarks = new int[numberOfStudents];
+        int[] chemistryMarks = new int[numberOfStudents];
+        int[] mathsMarks = new int[numberOfStudents];
         double[] percentages = new double[numberOfStudents];
         String[] grades = new String[numberOfStudents];
 
@@ -37,9 +39,10 @@ class GradeCalculator2D {
             }
 
             // Store marks
-            marks[i][0] = physics;
-            marks[i][1] = chemistry;
-            marks[i][2] = maths;
+            physicsMarks[i] = physics;
+            chemistryMarks[i] = chemistry;
+            mathsMarks[i] = maths;
+
 
             // Calculate percentage
             percentages[i] = (physics + chemistry + maths) / 3.0;
@@ -63,7 +66,7 @@ class GradeCalculator2D {
         // Display results
         System.out.println( "Student " + " Physics "+" Chemistry "+" Maths "+ " Percentage "+"  Grade");
         for (int i = 0; i < numberOfStudents; i++) {
-            System.out.println((i + 1)+"   "+ marks[i][0]+"   "+ marks[i][1]+"   "+ marks[i][2]+"   "+ percentages[i]+"   "+ grades[i]);
+             System.out.println((i + 1) + "   " + physicsMarks[i] + "   " + chemistryMarks[i] + "   " + mathsMarks[i] + "   " + percentages[i] + "   " + grades[i]);
         }
 
         // Close Scanner
